@@ -1,0 +1,7 @@
+.run/
+.idea/
+vendor/
+composer.lock
+.graphqlconfig
+tmp/*
+!.placeholder

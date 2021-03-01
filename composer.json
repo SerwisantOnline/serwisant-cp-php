@@ -1,0 +1,21 @@
+{
+  "name": "serwisant/serwisant-customer-panel",
+  "description": "Strona panelu klienckiego aplikacji Serwisant Online",
+  "type": "project",
+  "license": "Apache-2.0",
+  "require": {
+    "serwisant/serwisant-cp": "1.*",
+    "php" : ">=7.2"
+  },
+  "autoload": {
+    "psr-0": {
+      "Serwisant": "src"
+    }
+  },
+  "authors": [
+    {
+      "name": "Arkadiusz Kuryłowicz",
+      "email": "sms@kurylowicz.info"
+    }
+  ]
+}
