@@ -1,0 +1,28 @@
+{
+  "name": "cp",
+  "version": "1.0.0",
+  "description": "Customer panel for Serwisant Online",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node vendor/serwisant/serwisant-cp/npm-postinstall.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SerwisantOnline/serwisant-cp-php.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/SerwisantOnline/serwisant-cp-php/issues"
+  },
+  "homepage": "https://github.com/SerwisantOnline/serwisant-cp-php#readme",
+  "dependencies": {
+    "bootstrap": "^5.0.1",
+    "bootstrap-cookie-alert": "^1.2.1",
+    "bootstrap-datepicker": "^1.9.0",
+    "jquery": "^3.6.0",
+    "lodash": "^4.17.21"
+  }
+}
