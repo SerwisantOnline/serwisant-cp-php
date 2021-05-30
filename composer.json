@@ -5,7 +5,8 @@
   "license": "Apache-2.0",
   "require": {
     "serwisant/serwisant-cp": "1.*",
-    "php" : ">=7.2"
+    "php" : ">=7.2",
+    "ext-json": "*"
   },
   "autoload": {
     "psr-0": {
