@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/SerwisantOnline/serwisant-cp-php#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
     "bootstrap": "^5.0.1",
     "bootstrap-cookie-alert": "^1.2.1",
     "datetimepicker": "^0.1.39",
