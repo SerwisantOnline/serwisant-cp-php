@@ -4,25 +4,28 @@ Customer panel dla aplikacji Serwisant Online (https://serwisant.online)
 
 ## Informacja wstępna
 
-Niniejsza aplikacja jest panelem klienckim do aplikacji Serwisant Online: ta aplikacja nie może pracować samodzielnie,
-ponieważ korzysta z API, nie przechowując lokalnie żadnych danych. Do działania wymaga zarejestrowanego konta oraz
-ważnej subskrypcji na poziomie umożliwiającym dostęp do API.
+Niniejsza aplikacja jest panelem klienckim do aplikacji Serwisant Online (https://serwisant.online): ta aplikacja nie
+może pracować samodzielnie, ponieważ korzysta z API, nie przechowując lokalnie żadnych danych. Do działania wymaga
+zarejestrowanego konta oraz ważnej subskrypcji na poziomie umożliwiającym dostęp do API.
 
 Aplikacja jest opcjonalną alternatywą dla standardowo oferowanego panelu klienta serwowanego z zasobów Serwisant Online.
-Nie ma potrzeby instalowania tej aplikacji w celu uruchomienia panelu klienckiego. Operator w ramach usługi oferuje
-standardowy panel kliencki.
 
-Aplikację można zainstalować na własnym serwerze i mając na względzie licencję, na której jest udostępniona samodzielnie
-zmodyfikować:
+Standardowo nie ma potrzeby instalowania tej aplikacji w celu uruchomienia panelu klienckiego. Operator w ramach usługi
+oferuje standardowy panel kliencki.
 
-- domenę, pod którą pracuje aplikacja.
-- logikę,
-- wygląd
-- zakres funkcjonalny.
+Aplikację można zainstalować na własnym serwerze jeśli planujesz zmiany w:
+
+- domenie, pod którą pracuje aplikacja.
+- logiki,
+- wygląu
+- zakresu funkcjonalnego.
 
 Wyżej wymienione cele, są jedynym rozsądnym uzasadnieniem dla samodzielnej instalacji tej aplikacji.
 
-Aplikacja opiera się o dodatkową bibliotekę `serwisant/serwisant-cp` która zapewnia całą jej funkcjonalność.
+Obecna w tym repozytorium aplikacja opiera się o dodatkową bibliotekę Composer `serwisant/serwisant-cp` którą znajdziesz
+na platformie [Packagist][https://packagist.org/packages/serwisant/serwisant-cp]. Biblioteka zapewnia całą
+funkcjonalność obecnej tu aplikacji, stąd nie znajdziesz zatem tutaj kodu samej aplikacji, a wyłącznie tzw. bootstrap
+uruchamiający bibliotekę.
 
 ## Zastrzeżenie licencyjne
 
@@ -35,25 +38,23 @@ Z uwagi na powyższe operator aplikacji Serwisant Online:
 - nie udziela żadnej gwarancji co do poprawności działania niniejszej aplikacji.
 - nie zobowiązuje się do naprawiania błędów w tej aplikacji oraz wynikających z konfiguracji środowisk, w których
   aplikacja będzie pracowała.
-- może zaoferować odpłatne konsultacje związane z instalacją lub modyfikacją tej aplikacji.
+- może ***zaoferować odpłatne konsultacje*** związane z instalacją lub modyfikacją tej aplikacji.
 
 # Wymagania
 
 ## Serwer
 
-- PHP w wersji 7.2 lub 7.x
-- instalacja aplikacji pod domeną lub subdomeną gdzie można w ramach konfiguracji wskazać `root` katalog aplikacji
-  na `<katalog z aplikacją>/pubic`
-- (opcjonalnie) git, SSH, możliwość ustalenia zmiennych środowiskowych na serwerze.
+- PHP w wersji 7.2 wyższy.
+- możliwość wskazania w konfiguracji hostingu wybranego katalogu, jako głównego katalogu aplikacji.
 
-__UWAGA__.  
-Nie ma możliwości instalacji aplikacji w ramach istniejącej strony (eg. nie można 'wrzucić' aplikacji do katalogu ze
-swoją stroną na serwerze).
+Opcjonalnie:
 
-## Instalator
+- dostęp do shella, obecność na serwerze narzędzi `git` `composer` oraz `npm`.
 
-- composer: https://getcomposer.org
-- npm
+__UWAGA__.
+
+Jeśli chcesz zainstalować aplikację w ramach istniejącej strony, musisz przygotować własny bootstrap. Ten, który
+znajdziesz w repozytorium nie zadziała.
 
 # Instalacja aplikacji
 
@@ -67,7 +68,7 @@ git clone https://github.com/SerwisantOnline/serwisant-cp-php.git
 cd /home/user/serwisant-cp-php
 ```
 
-Po pobraniu kodu aplikacji, jeśli jest możliwość ustawiania zmiennych środowiskowych ustawiamy:
+Po pobraniu kodu aplikacji, jeśli jest możliwość ustawiania zmiennych środowiskowych w konfiguracji hostingu ustawiamy:
 
 - `OAUTH_KEY` - klucz API.
 - `OAUTH_SECRET` - hasło API.
@@ -85,9 +86,18 @@ $oauth_secret = 'haslo_API';
 Następnie instalacja zależności PHP i paczek JS:
 
 ```
-
 composer install
 npm install
 ```
 
 Następnie, serwer HTTP dla wybranej domeny kierujemy na katalog: `/home/user/serwisant-cp-php/public`.
+
+## Lokalna alternatywa
+
+Jeśli nie są dostępne narzędzia z powyższej procedury musisz zainstalować je lokalnie, skonfigurować aplikację i wgrać
+za pomocą FTP.
+
+# Modyfikacja aplikacji.
+
+Jeśli zamierasz modyfikować aplikację, zapoznaj się z dokumentacją
+modułu [serwisant/serwisant-cp](https://packagist.org/packages/serwisant/serwisant-cp).
