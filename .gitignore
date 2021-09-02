@@ -7,5 +7,5 @@ tmp/*
 !.placeholder
 node_modules/
 package-lock.json
-public/assets/
+public/assets-serwisant-cp/
 public/webfonts/
