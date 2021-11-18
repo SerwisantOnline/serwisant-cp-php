@@ -15,7 +15,10 @@ $env = getenv('PHP_ENV');
  * zwróć uwagę na to, że ich zawartość może być dostępna dla innych.
  */
 
-putenv('TMPDIR=' . realpath(__DIR__ . '/../tmp'));
+$dir = realpath(__DIR__ . '/..');
+$env = (stripos($_SERVER['SERVER_SOFTWARE'], 'Development Server') !== false ? 'development' : 'production');
+
+putenv('TMPDIR=' . $dir . '/tmp');
 
 /**
  * Nie ma potrzeby edytowania czegokolwiek poniżej.
@@ -27,8 +30,7 @@ if (!trim($env)) {
 ini_set('display_errors', ($env == 'development'));
 error_reporting(E_ALL);
 
-/** @noinspection PhpIncludeInspection */
-require_once realpath(__DIR__ . '/../vendor/autoload.php');
+require_once($dir . '/vendor/autoload.php');
 
 use Serwisant\SerwisantCp;
 use Serwisant\SerwisantApi;

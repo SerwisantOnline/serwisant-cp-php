@@ -17,7 +17,7 @@ Aplikację można zainstalować na własnym serwerze jeśli planujesz zmiany w:
 
 - domenie, pod którą pracuje aplikacja.
 - logiki,
-- wygląu
+- wyglądu
 - zakresu funkcjonalnego.
 
 Wyżej wymienione cele, są jedynym rozsądnym uzasadnieniem dla samodzielnej instalacji tej aplikacji.
@@ -44,7 +44,7 @@ Z uwagi na powyższe operator aplikacji Serwisant Online:
 
 ## Serwer
 
-- PHP w wersji 7.2 wyższy.
+- PHP w wersji 7.4 wyższy.
 - możliwość wskazania w konfiguracji hostingu wybranego katalogu, jako głównego katalogu aplikacji.
 
 Opcjonalnie:
