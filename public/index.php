@@ -8,7 +8,6 @@
 
 $oauth_key = getenv('OAUTH_KEY');
 $oauth_secret = getenv('OAUTH_SECRET');
-$env = getenv('PHP_ENV');
 
 /**
  * Jeśli chcesz korzystać, ze współdzielonego katalogu na pliki tymczasowe i sesje usuń poniższą linijkę, przy czym
@@ -16,7 +15,7 @@ $env = getenv('PHP_ENV');
  */
 
 $dir = realpath(__DIR__ . '/..');
-$env = (stripos($_SERVER['SERVER_SOFTWARE'], 'Development Server') !== false ? 'development' : 'production');
+$env = getenv('PHP_ENV');
 
 putenv('TMPDIR=' . $dir . '/tmp');
 
