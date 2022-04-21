@@ -9,3 +9,4 @@ node_modules/
 package-lock.json
 public/assets-serwisant-cp/
 public/webfonts/
+.DS_Store
