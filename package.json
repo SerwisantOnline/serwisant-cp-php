@@ -20,9 +20,9 @@
   "homepage": "https://github.com/SerwisantOnline/serwisant-cp-php#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
-    "bootstrap": "^5.0.1",
+    "bootstrap": "^5.1.0",
     "bootstrap-cookie-alert": "^1.2.1",
-    "bootstrap-select": "1.14.0-beta3",
+    "bootstrap-select": "1.14.0-beta2",
     "datetimepicker": "^0.1.39",
     "filepond": "^4.27.2",
     "filepond-plugin-file-validate-type": "^1.2.6",

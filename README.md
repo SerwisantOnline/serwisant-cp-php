@@ -73,7 +73,7 @@ Po pobraniu kodu aplikacji, jeśli jest możliwość ustawiania zmiennych środo
 - `OAUTH_KEY` - klucz API.
 - `OAUTH_SECRET` - hasło API.
 
-Jeśli nie ma możliwości użycia zmiennych środowiskowych proszę wyedytować plik `public/index.php` i zastąpić kod:
+Jeśli nie ma możliwości użycia zmiennych środowiskowych proszę edytować plik `public/index.php` i zastąpić kod:
 
 ```
 # $oauth_key = getenv('OAUTH_KEY');
