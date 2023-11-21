@@ -1,22 +1,21 @@
 {
-  "name": "serwisant/serwisant-customer-panel",
-  "description": "Strona panelu klienckiego aplikacji Serwisant Online",
-  "type": "project",
-  "license": "Apache-2.0",
-  "require": {
-    "serwisant/serwisant-cp": "1.*",
-    "php" : ">=7.4",
-    "ext-json": "*"
-  },
-  "autoload": {
-    "psr-0": {
-      "Serwisant": "src"
+    "name": "serwisant/naprawiam.online",
+    "description": "Panel kliencki aplikacji Serwisant Online: https://naprawiam.online",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Arkadiusz Kuryłowicz",
+            "email": "arkadiusz.kurylowicz@serwisant-online.pl"
+        }
+    ],
+    "require": {
+        "php" : ">=7.4",
+        "ext-json": "*",
+        "serwisant/serwisant-cp": "1.1.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Serwisant": "src"
+        }
     }
-  },
-  "authors": [
-    {
-      "name": "Arkadiusz Kuryłowicz",
-      "email": "sms@kurylowicz.info"
-    }
-  ]
 }

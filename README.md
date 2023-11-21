@@ -97,6 +97,16 @@ Następnie, serwer HTTP dla wybranej domeny kierujemy na katalog: `/home/user/se
 Jeśli nie są dostępne narzędzia z powyższej procedury musisz zainstalować je lokalnie, skonfigurować aplikację i wgrać
 za pomocą FTP.
 
+Możesz także uruchomić aplikację lokalnie. W katalogu głownym aplikacji uruchom komendę `OAUTH_KEY="<klucz>" OAUTH_SECRET="<sekret>" php -S 0.0.0.0:3001 -t ./public`
+
+# Konfiguracja końcowa
+
+Po uruchomieniu aplikacji musisz zaktualizować konfigurację w serwisant.online podając adres, pod którym działa aplikacja. Dzięki temu będziemy mogli poprawnie 
+wskazywać adres panelu w komunikacji do klientów. Przede wszystkim [zaktualizuj opcję bazowego adresu](https://serwisant.online/config_options/custom_cp_base_url/edit)
+Podaj w niej bazowy adres panelu, bez żadnych dodatkowych ścieżek.
+
+Inne opcje związane z konfiguracją panelu, w tym wiadomości powitalne, konfigurację przesyłu plików, etc. znajdziesz w [panelu konfiguracyjnym.](https://serwisant.online/config_options?group=customer_panel)
+
 # Modyfikacja aplikacji.
 
 Jeśli zamierasz modyfikować aplikację, zapoznaj się z dokumentacją

@@ -1,33 +1,10 @@
 {
-  "name": "cp",
-  "version": "1.0.0",
-  "description": "Customer panel for Serwisant Online",
+  "name": "naprawiam.online",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "node vendor/serwisant/serwisant-cp/npm-postinstall.js"
+    "postinstall": "node vendor/serwisant/serwisant-cp/npm-package/build.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SerwisantOnline/serwisant-cp-php.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/SerwisantOnline/serwisant-cp-php/issues"
-  },
-  "homepage": "https://github.com/SerwisantOnline/serwisant-cp-php#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.3",
-    "bootstrap": "^5.1.0",
-    "bootstrap-cookie-alert": "^1.2.1",
-    "bootstrap-select": "1.14.0-beta2",
-    "datetimepicker": "^0.1.39",
-    "filepond": "^4.27.2",
-    "filepond-plugin-file-validate-type": "^1.2.6",
-    "filepond-plugin-image-preview": "^4.6.6",
-    "jquery": "^3.6.0",
-    "lodash": "^4.17.21"
+    "serwisant-cp": "file:vendor/serwisant/serwisant-cp/npm-package"
   }
 }
