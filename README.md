@@ -13,7 +13,7 @@ Aplikacja jest opcjonalną alternatywą dla standardowo oferowanego panelu klien
 Standardowo nie ma potrzeby instalowania tej aplikacji w celu uruchomienia panelu klienckiego. Operator w ramach usługi
 oferuje standardowy panel kliencki.
 
-Aplikację można zainstalować na własnym serwerze jeśli planujesz zmiany w:
+Aplikację można zainstalować na własnym serwerze, jeśli planujesz zmiany w:
 
 - domenie, pod którą pracuje aplikacja.
 - logiki,
@@ -23,7 +23,7 @@ Aplikację można zainstalować na własnym serwerze jeśli planujesz zmiany w:
 Wyżej wymienione cele, są jedynym rozsądnym uzasadnieniem dla samodzielnej instalacji tej aplikacji.
 
 Obecna w tym repozytorium aplikacja opiera się o dodatkową bibliotekę Composer `serwisant/serwisant-cp` którą znajdziesz
-na platformie [Packagist][https://packagist.org/packages/serwisant/serwisant-cp]. Biblioteka zapewnia całą
+na platformie [Packagist][https://packagist.org/packages/serwisant/serwisant-cp]. Biblioteka zapewnia pełną
 funkcjonalność obecnej tu aplikacji, stąd nie znajdziesz zatem tutaj kodu samej aplikacji, a wyłącznie tzw. bootstrap
 uruchamiający bibliotekę.
 
@@ -46,6 +46,7 @@ Z uwagi na powyższe operator aplikacji Serwisant Online:
 
 - PHP w wersji 7.4 wyższy.
 - możliwość wskazania w konfiguracji hostingu wybranego katalogu, jako głównego katalogu aplikacji.
+- aktywna obsługa HTTPS (bezpieczne połączenie SSL).  
 
 Opcjonalnie:
 
@@ -94,20 +95,33 @@ Następnie, serwer HTTP dla wybranej domeny kierujemy na katalog: `/home/user/se
 
 ## Lokalna alternatywa
 
-Jeśli nie są dostępne narzędzia z powyższej procedury musisz zainstalować je lokalnie, skonfigurować aplikację i wgrać
-za pomocą FTP.
+Jeśli narzędzia z powyższej procedury nie są dostępne na serwerze, którego używasz lub nie masz dostępu do powłoki
+systemowej serwera (shell), musisz zainstalować je lokalnie, skonfigurować aplikację i wgrać
+wszystkie pliki za pomocą FTP.
 
-Możesz także uruchomić aplikację lokalnie. W katalogu głownym aplikacji uruchom komendę `OAUTH_KEY="<klucz>" OAUTH_SECRET="<sekret>" php -S 0.0.0.0:3001 -t ./public`
+Możesz także uruchomić aplikację lokalnie. W katalogu głównym aplikacji uruchom
+komendę `PHP_ENV="development" OAUTH_KEY="<klucz>" OAUTH_SECRET="<sekret>" php -S 0.0.0.0:3001 -t ./public`
 
 # Konfiguracja końcowa
 
-Po uruchomieniu aplikacji musisz zaktualizować konfigurację w serwisant.online podając adres, pod którym działa aplikacja. Dzięki temu będziemy mogli poprawnie 
-wskazywać adres panelu w komunikacji do klientów. Przede wszystkim [zaktualizuj opcję bazowego adresu](https://serwisant.online/config_options/custom_cp_base_url/edit)
+Po uruchomieniu aplikacji musisz zaktualizować konfigurację w serwisant.online podając adres, pod którym działa
+aplikacja. Dzięki temu będziemy mogli poprawnie
+wskazywać adres panelu w komunikacji do klientów. Przede
+wszystkim [zaktualizuj opcję bazowego adresu](https://serwisant.online/config_options/custom_cp_base_url/edit)
 Podaj w niej bazowy adres panelu, bez żadnych dodatkowych ścieżek.
 
-Inne opcje związane z konfiguracją panelu, w tym wiadomości powitalne, konfigurację przesyłu plików, etc. znajdziesz w [panelu konfiguracyjnym.](https://serwisant.online/config_options?group=customer_panel)
+Inne opcje związane z konfiguracją panelu, w tym wiadomości powitalne, konfigurację przesyłu plików, etc. znajdziesz
+w [panelu konfiguracyjnym.](https://serwisant.online/config_options?group=customer_panel)
 
 # Modyfikacja aplikacji.
 
 Jeśli zamierasz modyfikować aplikację, zapoznaj się z dokumentacją
 modułu [serwisant/serwisant-cp](https://packagist.org/packages/serwisant/serwisant-cp).
+
+# Typowe problemy
+
+***Logując się do panelu, podaję poprawne login i hasło, ale po zatwierdzeniu jestem przekierowywany znów na stronę
+logowania.***
+
+Najbardziej prawdopodobną przyczyną tego typu sytuacji jest brak możliwości ustawienia cookie. Dzieje się tak, jeśli
+twój serwer nie obsługuje bezpiecznego połączenia HTTPS. Postaraj się zapewnić bezpieczne połączenie dla aplikacji. 
