@@ -46,7 +46,7 @@ Z uwagi na powyższe operator aplikacji Serwisant Online:
 
 - PHP w wersji 7.4 wyższy.
 - możliwość wskazania w konfiguracji hostingu wybranego katalogu, jako głównego katalogu aplikacji.
-- aktywna obsługa HTTPS (bezpieczne połączenie SSL).  
+- aktywna obsługa HTTPS (bezpieczne połączenie SSL).
 
 Opcjonalnie:
 
@@ -124,4 +124,10 @@ modułu [serwisant/serwisant-cp](https://packagist.org/packages/serwisant/serwis
 logowania.***
 
 Najbardziej prawdopodobną przyczyną tego typu sytuacji jest brak możliwości ustawienia cookie. Dzieje się tak, jeśli
-twój serwer nie obsługuje bezpiecznego połączenia HTTPS. Postaraj się zapewnić bezpieczne połączenie dla aplikacji. 
+twój serwer nie obsługuje bezpiecznego połączenia HTTPS. Postaraj się zapewnić bezpieczne połączenie dla aplikacji.
+
+***Aplikacja wygląda brzydko, formularze są nieczytelne.***
+
+Niepoprawny widok strony, brak styli, formatowania to efekt braku plików CSS i JS. Upewnij się, że wykonałeś
+polecenie `npm install` i że wykonało się ono bez błędów. Jeśli nie było błędów i strona nadal nie wygląda poprawnie
+uruchom polecenie `npm run postinstall` i upewnij się, że wykonało się bez błędów.
