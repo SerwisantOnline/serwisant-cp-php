@@ -11,7 +11,7 @@
     "require": {
         "php" : ">=7.4",
         "ext-json": "*",
-        "serwisant/serwisant-cp": "1.1.*"
+        "serwisant/serwisant-cp": "1.2.*"
     },
     "autoload": {
         "psr-0": {
