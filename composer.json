@@ -4,14 +4,14 @@
     "type": "project",
     "authors": [
         {
-            "name": "Arkadiusz Kuryłowicz",
-            "email": "arkadiusz.kurylowicz@serwisant-online.pl"
+            "name": "Sugar Mice Software",
+            "email": "hello@sugarmice.software"
         }
     ],
     "require": {
         "php" : ">=7.4",
         "ext-json": "*",
-        "serwisant/serwisant-cp": "1.2.*"
+        "serwisant/serwisant-cp": "1.3.*"
     },
     "autoload": {
         "psr-0": {
