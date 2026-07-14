@@ -54,8 +54,7 @@ Opcjonalnie:
 
 __UWAGA__.
 
-Jeśli chcesz zainstalować aplikację w ramach istniejącej strony, musisz przygotować własny bootstrap. Ten, który
-znajdziesz w repozytorium nie zadziała.
+Jeśli chcesz zainstalować aplikację w ramach istniejącej strony, musisz przygotować własny setup. Kod, który jest w repozytorium zakłada, że będzie działał pod dedykowaną domeną, na osobnej konfiguracji serwera wirtualnego. Wrzucenie kodu do istniejącego projektu nie zadziała.
 
 # Instalacja aplikacji
 
