@@ -59,7 +59,8 @@ znajdziesz w repozytorium nie zadziała.
 
 # Instalacja aplikacji
 
-Wygenerować w panelu ustawień API aplikacji http://serwisant.online klucze APII ze scope  `public` oraz `customer`.
+Wygenerować w panelu ustawień API aplikacji [http://serwisant.online](https://serwisant.online/oauth_applications) klucze API ze scope  `public` oraz `customer`. 
+Dostęp do generowania kluczy mają użytkownicy subskrypcji "all-in-one".
 
 SSH na serwer hostingowy, instalujemy przykładowo w katalogu `/home/user` Tam:
 
